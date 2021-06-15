@@ -1,0 +1,97 @@
+# ------------------------------ #
+# ---------- General ----------- #
+# ------------------------------ #
+
+# OS
+# Ref: https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
+# Ref: https://github.com/github/gitignore/blob/main/Global/Windows.gitignore
+# Ref: https://github.com/github/gitignore/blob/main/Global/Linux.gitignore
+.DS_Store
+Thumbs.db
+*.sh
+*.bat
+
+# Editors
+# Ref: https://github.com/github/gitignore/blob/main/Global
+# Ref: https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+# Ref: https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+# Ref: https://github.com/github/gitignore/blob/main/Global/SublimeText.gitignore
+.history
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+
+# ------------------------------ #
+# ----------- Python ----------- #
+# ------------------------------ #
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environments
+.env/
+env/
+.venv/
+venv/
+.env.bak/
+env.bak/
+.venv.bak/
+venv.bak/
+ENV/
+
+# Ruff
+.ruff_cache/
+
+# ------------------------------ #
+# ------------ *** ------------- #
+# ------------------------------ #
