@@ -1,0 +1,4 @@
+#black @ git+https://github.com/LetsZiggy/black.git@indent-2
+#black @ git+https://github.com/LetsZiggy/black.git@indent-tab
+
+typing_extensions==4.11.0
