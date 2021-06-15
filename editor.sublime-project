@@ -1,0 +1,71 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "root",
+			"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".venv", "__pycache__", "*.egg-info"],
+			"follow_symlinks": true,
+		},
+		{
+			"path": "~/.config/sublime-text/Packages/tailwindcss-class-sorter",
+			"name": "local-packages",
+			"folder_exclude_patterns": [],
+			"follow_symlinks": true,
+		},
+	],
+	"settings": {
+		/* "default_encoding": "UTF-8", */
+		/* "default_line_ending": "unix", */
+		"detect_indentation": true,
+		/* "ensure_newline_at_eof_on_save": true, */
+		"show_definitions": false,
+		"show_line_endings": true,
+		/* "tab_size": 2, */
+		/* "translate_tabs_to_spaces": false, */
+		/* "trim_trailing_white_space_on_save": "all", */
+		"use_tab_stops": true,
+		"word_wrap": true,
+
+		/* tailwindcss-class-sorter */
+		"tailwindcss-class-sorter": {
+			"format_on_save": true,
+			"embedded_config": false,
+			// "embedded_config": true,
+			"config_path": "${project_path}/tests/config_test.json",
+			// "config_path": "${project_path}/tests/config_test_embedded.json",
+		},
+
+		/* LSP */
+		"lsp_format_on_save": true,
+		"lsp_code_actions_on_save": {
+			"source.fixAll.json": false,
+			"source.fixAll.ruff": true,
+			"source.organizeImports.ruff": false,
+		},
+
+		"LSP": {
+			/* LSP-basedpyright */
+			"LSP-basedpyright": {
+				"enabled": true,
+				"settings": {
+					"python.pythonPath": "${project_path}/.venv/bin/python",
+					"python.venvPath": "${project_path}/.venv",
+					"basedpyright.disableOrganizeImports": true,
+					"basedpyright.dev_environment": "sublime_text",
+				},
+			},
+
+			/* LSP-ruff */
+			"LSP-ruff": {
+				"enabled": true,
+				"initializationOptions": {
+					"settings": {
+						"configuration": "${project_path}/pyproject.toml",
+					},
+				},
+			},
+		},
+	},
+
+	"debugger_configurations": [],
+}
