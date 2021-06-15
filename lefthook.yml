@@ -1,0 +1,30 @@
+$schema: 'https://raw.githubusercontent.com/evilmartians/lefthook/master/schema.json'
+
+commit-msg:
+  commands:
+    go-gitlint:
+      run: >
+        go-gitlint
+        --path="$(git rev-parse --show-toplevel)"
+        --msg-file="$(git rev-parse --show-toplevel)/{1}"
+        --since=$(date +"%Y-%m-%d")
+        --max-parents=1
+        --subject-regex="(?:^Initial commit$)|(?:^(?:fixup! )?(?:(?:feat)|(?:fix)|(?:docs)|(?:style)|(?:refactor)|(?:perf)|(?:test)|(?:build)|(?:ci)|(?:chore)|(?:revert))(?:\([^()\r\n]+\))?: (?:(?:LICENSE)|(?:README)|(?:[^\r\n ][^\r\n]+[^. ]))$)"
+
+pre-commit:
+  # parallel: true
+  commands:
+    ruff:
+      glob: '{.[!.],}*.py'
+      run: |
+        echo -e "staged_files >>> {staged_files}\n";
+        uv run ruff format {staged_files};
+        uv run ruff check --fix {staged_files};
+      stage_fixed: true
+    prettier-json:
+      glob: '{.[!.],}*.json'
+      run: |
+        echo -e "staged_files >>> {staged_files}\n";
+        pnpm dlx prettier --config prettier.config.js --write {staged_files};
+        sed -E -i -z -e 's/\n+$//' {staged_files};
+      stage_fixed: true

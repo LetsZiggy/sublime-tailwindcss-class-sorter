@@ -1,0 +1,40 @@
+#$schema: 'https://taskfile.dev/schema.json'
+
+version: '3'
+
+silent: true
+
+tasks:
+  update-stubs:
+    desc: task update-stubs
+    cmds:
+      - wget -O ./typings/sublime.pyi https://raw.githubusercontent.com/sublimelsp/LSP/refs/heads/main/stubs/sublime.pyi
+      - wget -O ./typings/sublime_plugin.pyi https://raw.githubusercontent.com/sublimelsp/LSP/refs/heads/main/stubs/sublime_plugin.pyi
+
+  tag:
+    desc: task tag -- [VERSION]
+    cmds:
+      - |
+        git add .
+        git commit -m "feat: tailwindcss-class-sorter $(sed -E -e 's/\.[0-9]+$/\.\*/' <<< {{.CLI_ARGS}}) support"
+        git tag -a "v{{.CLI_ARGS}}" -m "tailwindcss-class-sorter v$(sed -E -e 's/\.[0-9]+$/\.\*/' <<< {{.CLI_ARGS}}) support"
+
+  build:
+    desc: task build -- [VERSION]
+    cmds:
+      - task: update-version
+      - task: get-tests
+
+  update-version:
+    desc: task update-version -- [VERSION]
+    cmds:
+      - |
+        sed -E -i -e 's/VERSION = "[0-9]+\.[0-9]+\.[0-9]+"/VERSION = "{{.CLI_ARGS}}"/' boot.py
+        sed -E -i -e 's/VERSION = "[0-9]+\.[0-9]+\.[0-9]+"/VERSION = "{{.CLI_ARGS}}"/' tailwindcss-class-sorter.py
+
+  get-tests:
+    desc: task get-tests -- [VERSION]
+    cmds:
+      - wget -O ./tests/formatter-test.before.txt https://raw.githubusercontent.com/LetsZiggy/tailwindcss-class-sorter/refs/tags/v{{.CLI_ARGS}}/tests/test-html.before.txt
+      - wget -O ./tests/formatter-test.after.txt https://raw.githubusercontent.com/LetsZiggy/tailwindcss-class-sorter/refs/tags/v{{.CLI_ARGS}}/tests/test-html.after.txt
+      - cp -f ./tests/formatter-test.before.txt ./tests/formatter-test.html
