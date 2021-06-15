@@ -1,0 +1,77 @@
+[project]
+name = "sublime-tailwindcss-class-sorter"
+dynamic = ["version"]
+requires-python = "~= 3.8.0"
+dependencies = [
+	#"black @ git+https://github.com/LetsZiggy/black.git@indent-2",
+	#"black @ git+https://github.com/LetsZiggy/black.git@indent-tab",
+	"basedpyright",
+	"ruff",
+	"typing_extensions",
+]
+
+[tool.basedpyright]
+venvPath = "."
+venv = "venv"
+#pythonVersion = "3.8" # optional
+
+	[[tool.basedpyright.executionEnvironments]]
+	root = "."
+	extraPaths = []
+	#pythonVersion = "3.8" # optional
+	pythonPlatform = "Linux"
+
+[tool.ruff]
+extend-exclude = [
+	"CVS",
+	"__pycache__",
+	".env",
+	".venv",
+	"env",
+	"venv",
+]
+fix = true
+force-exclude = true
+line-length = 120
+#target-version = "py38" # see [project].requires-python
+
+	[tool.ruff.format]
+	docstring-code-format = true
+	docstring-code-line-length = "dynamic"
+	indent-style = "tab"
+	line-ending = "lf"
+	quote-style = "double"
+
+	[tool.ruff.lint]
+	extend-select = [
+		"C90",
+		"I",
+		"N",
+		"A",
+		"COM",
+		#"DJ", # if using django
+		"PIE",
+		"PT",
+		"Q",
+		"SIM",
+		"PLR",
+	]
+	ignore = [
+		"W191",
+		"E111",
+		"E114",
+		"E117",
+		"D206",
+		"D300",
+		"Q000",
+		"Q001",
+		"Q002",
+		"Q003",
+		"COM812",
+		"COM819",
+		"ISC001",
+		"ISC002",
+	] # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+
+	[tool.ruff.lint.pycodestyle]
+	max-doc-length = 120
