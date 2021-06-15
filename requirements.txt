@@ -1,0 +1,2 @@
+#black @ git+https://github.com/LetsZiggy/black.git@indent-2
+#black @ git+https://github.com/LetsZiggy/black.git@indent-tab

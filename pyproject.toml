@@ -1,0 +1,55 @@
+[tool.pyright]
+venvPath = "."
+venv = "venv"
+pythonVersion = "3.8"
+
+	[[tool.pyright.executionEnvironments]]
+	root = "."
+	extraPaths = []
+	pythonVersion = "3.8"
+	pythonPlatform = "Linux"
+
+[tool.ruff]
+extend-exclude = [
+	"CVS",
+	"__pycache__"
+]
+extend-ignore = [
+	"W191",
+	"E111",
+	"E114",
+	"E117",
+	"D206",
+	"D300",
+	"Q000",
+	"Q001",
+	"Q002",
+	"Q003",
+	"COM812",
+	"COM819",
+	"ISC001",
+	"ISC002"
+] # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+extend-select = [
+	"C90",
+	"I",
+	"N",
+	"A",
+	"COM",
+	"PIE",
+	"PT",
+	"Q",
+	"SIM",
+	"PLR"
+]
+fix = true
+force-exclude = true
+line-length = 120
+target-version = "py38"
+
+	[tool.ruff.pycodestyle]
+	max-doc-length = 120
+
+	[tool.ruff.format]
+	indent-style = "tab"
+	quote-style = "double"
