@@ -1,0 +1,91 @@
+[project]
+name = "sublime-tailwindcss-class-sorter"
+dynamic = ["version"]
+requires-python = "~=3.8.0"
+dependencies = []
+
+[dependency-groups]
+dev = [
+	"basedpyright",
+	"ruff",
+	"typing-extensions",
+]
+
+[tool.basedpyright]
+venvPath = "."
+venv = ".venv"
+#pythonVersion = "" # optional
+
+	[[tool.basedpyright.executionEnvironments]]
+	root = "."
+	extraPaths = []
+	#pythonVersion = "" # optional
+	pythonPlatform = "Linux"
+
+[tool.ruff]
+#exclude = [] # use extend-exclude
+extend-exclude = [
+	".svn",
+	".git",
+	".hg",
+	"CVS",
+	"node_modules",
+	"vendor",
+	".env",
+	"env",
+	".venv",
+	"venv",
+	".env.bak",
+	"env.bak",
+	".venv.bak",
+	"venv.bak",
+	"ENV",
+	"__pycache__",
+]
+fix = true
+force-exclude = true
+line-length = 120
+#target-version = "" # use [project].requires-python (https://docs.astral.sh/ruff/settings/#target-version)
+
+	[tool.ruff.format]
+	docstring-code-format = true
+	docstring-code-line-length = "dynamic"
+	indent-style = "tab"
+	line-ending = "lf"
+	quote-style = "double"
+
+	[tool.ruff.lint]
+	#extend-ignore = [] # deprecated (https://docs.astral.sh/ruff/settings/#lint_extend-ignore)
+	extend-select = [
+		"C90",
+		"I",
+		"N",
+		"A",
+		"COM",
+		#"DJ", # if using django
+		"PIE",
+		"PT",
+		"Q",
+		"SIM",
+		"PLR",
+	]
+	ignore = [
+		"W191",
+		"E111",
+		"E114",
+		"E117",
+		"D206",
+		"D300",
+		"Q000",
+		"Q001",
+		"Q002",
+		"Q003",
+		"COM812",
+		"COM819",
+		"ISC001",
+		"ISC002",
+	] # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+	#select = [] # use extend-select
+
+	[tool.ruff.lint.pycodestyle]
+	max-doc-length = 120
