@@ -1,0 +1,6 @@
+tests/* export-ignore
+editor.sublime-project export-ignore
+pyproject.toml export-ignore
+requirements.txt export-ignore
+version export-ignore
+.editorconfig export-ignore

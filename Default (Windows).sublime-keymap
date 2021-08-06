@@ -1,0 +1,6 @@
+[
+	{
+		"keys": ["primary+shift+."],
+		"command": "sort_tailwindcss",
+	},
+]
