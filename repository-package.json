@@ -1,0 +1,18 @@
+{
+	"$schema": "sublime://packagecontrol.io/schemas/repository",
+	"schema_version": "4.0.0",
+	"packages": [
+		{
+			"name": "tailwindcss-class-sorter",
+			"details": "https://github.com/LetsZiggy/sublime-tailwindcss-class-sorter",
+			"issues": "https://github.com/LetsZiggy/sublime-tailwindcss-class-sorter/issues",
+			"readme": "https://raw.githubusercontent.com/LetsZiggy/sublime-tailwindcss-class-sorter/main/README.md",
+			"releases": [
+				{
+					"sublime_text": ">=3000",
+					"tags": true
+				}
+			]
+		}
+	]
+}
