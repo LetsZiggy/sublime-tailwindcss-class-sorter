@@ -1,0 +1,20 @@
+{
+	/**
+	 * Automatically format when a file is saved
+	 */
+	"format_on_save": false,
+
+	/**
+	 * Indicate if config is embedded in another config json/jsonc file
+	 * Config will be expected to be in "tailwindcss_class_sorter" key/value
+	 */
+	"embedded_config": false,
+
+	/**
+	 * Path to config json/jsonc file
+	 * see https://github.com/LetsZiggy/tailwindcss-class-sorter/blob/main/dist/config.json
+	 *
+	 * To use default config, set "config_path": ""
+	 */
+	"config_path": "",
+}
