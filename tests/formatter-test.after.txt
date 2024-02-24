@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta
+		charset="utf-8">
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div
+		class="custom-class print:before:hover:content-['*'] print:after:hover:content-['*'] block ltr:dark:sm:block rtl:dark:2xl:block m-2 dark:sm:active:hover:m-2 dark:2xl:active:hover:m-2 text-red-50/50">
+	</div>
+	<div
+		class="custom-class [@supports(backdrop-filter:blur(0))]:before:[&:nth-child(1)]:top-[5px] [@supports(backdrop-filter:blur(0))]:after:[&:nth-child(1)]:top-[5px] [@supports(backdrop-filter:blur(0))]:[&:nth-child(1)]:top-[5px] [@supports(backdrop-filter:blur(0))]:sm:[&:nth-child(1)]:top-[5px] [@supports(backdrop-filter:blur(0))]:2xl:[&:nth-child(1)]:top-[5px]">
+	</div>
+	<div
+		class="custom-class block sm:block 2xl:block min-[5px]:block max-sm:block max-2xl:block max-[5px]:block lg:peer/identifier:m-2 lg:peer-[.is-bool]:m-2 lg:peer-[:nth-of-type(1)_&]:m-2 aria-checked:lg:m-2 lg:group-hover/identifier:m-2 lg:peer-hover/identifier:m-2 lg:group-[:nth-of-type(1)_&]:m-2 lg:group/identifier:m-2 lg:group-[.is-bool]:m-2 supports-[backdrop-filter]:lg:m-2 supports-[display:grid]:lg:m-2 data-[size=large]:lg:m-2 sm:md:lg:xl:2xl:min-[5px]:max-sm:max-md:max-lg:max-xl:max-2xl:max-[5px]:text-red-50/50 peer-aria-[sort=ascending]:lg:bg-[url('img.svg')] aria-[sort=ascending]:lg:bg-[url('img.svg')] group-aria-[sort=ascending]:lg:bg-[url('img.svg')]">
+	</div>
+	<div
+		class="custom-class inset-5 start-5 end-5 line-clamp-3 ps-5 pe-5 ms-5 me-5 text-sm/[5px] text-lg/5 list-image-[url('carrot.png')] bg-purple-400/20 from-10% from-[5.5%] to-90% via-30% border-s-red-500 border-s-5 border-e-red-500 border-e-5 rounded-s rounded-ss rounded-e rounded-se rounded-es rounded-ee rounded-[5px] scroll-me-5 scroll-ms-5 scroll-pe-5 scroll-ps-5">
+	</div>
+	<div
+		class="@container @container/main form-input form-radio form-select form-multiselect form-textarea form-checkbox prose prose-invert not-prose prose-neutral prose-gray prose-base prose-2xl hover:prose-headings:prose-lead:prose-h1:prose-h2:prose-h3:prose-h4:prose-p:prose-a:prose-blockquote:prose-figure:prose-figcaption:prose-strong:prose-em:prose-code:prose-pre:prose-ol:prose-ul:prose-li:prose-table:prose-thead:prose-tr:prose-th:prose-td:prose-img:prose-video:prose-hr:top-[5px]">
+		<div
+			class="@xs:hover:top-[5px] @xs/main:hover:top-[5px] @sm:hover:top-[5px] @md:hover:top-[5px] @lg:hover:top-[5px] @xl:hover:top-[5px] @2xl:hover:top-[5px] @3xl:hover:top-[5px] @4xl:hover:top-[5px] @5xl:hover:top-[5px] @6xl:hover:top-[5px] @7xl:hover:top-[5px] @[1px]:hover:top-[5px] @[1px]/main:hover:top-[5px]">
+		</div>
+	</div>
+</body>
+</html>
