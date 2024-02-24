@@ -7,7 +7,7 @@ import sublime
 
 PROJECT_NAME = "tailwindcss-class-sorter"
 PROJECT_NAME_SHORT = "twcs"
-VERSION = "3.3.0"
+VERSION = "3.4.0"
 PLATFORM = sublime.platform()  # Literal["osx", "linux", "windows"]
 ARCH = sublime.arch()  # Literal["x32", "x64", "arm64"]
 BINARY_TYPE = "darwin-" if PLATFORM == "osx" else f"{PLATFORM}-"
