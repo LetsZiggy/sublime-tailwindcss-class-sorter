@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta
+		charset="utf-8">
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div
+		class="  dark:2xl:active:hover:m-2   rtl:dark:2xl:block   text-red-50/50   block   print:before:hover:content-['*']   m-2   dark:sm:active:hover:m-2   custom-class   ltr:dark:sm:block   print:after:hover:content-['*']  ">
+	</div>
+	<div
+		class="   2xl:[&:nth-child(1)]:[@supports(backdrop-filter:blur(0))]:top-[5px]  custom-class  sm:[&:nth-child(1)]:[@supports(backdrop-filter:blur(0))]:top-[5px]  [&:nth-child(1)]:[@supports(backdrop-filter:blur(0))]:after:top-[5px]  [&:nth-child(1)]:[@supports(backdrop-filter:blur(0))]:top-[5px]  [&:nth-child(1)]:[@supports(backdrop-filter:blur(0))]:before:top-[5px]   ">
+	</div>
+	<div
+		class="  peer/identifier:lg:m-2   max-[5px]:block   peer-aria-[sort=ascending]:lg:bg-[url('img.svg')]   sm:block   lg:aria-[sort=ascending]:bg-[url('img.svg')]   peer-[.is-bool]:lg:m-2   max-[5px]:md:max-md:max-2xl:2xl:lg:max-xl:max-lg:xl:sm:max-sm:min-[5px]:text-red-50/50   group-aria-[sort=ascending]:lg:bg-[url('img.svg')]   max-sm:block   peer-[:nth-of-type(1)_&]:lg:m-2   lg:aria-checked:m-2   group-hover/identifier:lg:m-2   peer-hover/identifier:lg:m-2   2xl:block   group-[:nth-of-type(1)_&]:lg:m-2   group/identifier:lg:m-2   max-2xl:block   custom-class   group-[.is-bool]:lg:m-2   supports-[backdrop-filter]:lg:m-2   block   supports-[display:grid]:lg:m-2   min-[5px]:block   data-[size=large]:lg:m-2  ">
+	</div>
+	<div
+		class="   border-s-red-500  start-5  pe-5  rounded-ee  rounded-ss border-s-5 ms-5 via-30% bg-purple-400/20 scroll-pe-5 scroll-ms-5 end-5 to-90%    text-sm/[5px]   rounded-es  ps-5   rounded-s  scroll-me-5  scroll-ps-5   me-5  text-lg/5    list-image-[url('carrot.png')]     rounded-e  rounded-se   border-e-red-500  border-e-5  line-clamp-3  rounded-[5px]  from-10%  from-[5.5%]  custom-class   inset-5    ">
+	</div>
+	<div
+		class="  prose-table:prose-h1:prose-hr:prose-blockquote:prose-headings:prose-lead:prose-video:prose-th:prose-thead:prose-figcaption:prose-li:prose-ol:prose-tr:prose-code:prose-strong:prose-a:prose-td:prose-h2:prose-h4:prose-pre:prose-em:prose-p:hover:prose-figure:prose-ul:prose-img:prose-h3:top-[5px]  prose    form-radio   form-checkbox  @container  form-multiselect  prose-neutral  form-select  prose-2xl   form-textarea  prose-gray  @container/main  form-input  prose-base   prose-invert  not-prose ">
+		<div
+			class="   hover:@lg:top-[5px]   hover:@[1px]/main:top-[5px]  hover:@[1px]:top-[5px]  hover:@md:top-[5px]  hover:@2xl:top-[5px]  hover:@5xl:top-[5px]  hover:@4xl:top-[5px]  hover:@6xl:top-[5px]  hover:@sm:top-[5px]  hover:@xs:top-[5px]  hover:@7xl:top-[5px]  hover:@3xl:top-[5px]  hover:@xl:top-[5px]   hover:@xs/main:top-[5px]   ">
+		</div>
+	</div>
+</body>
+</html>
