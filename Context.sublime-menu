@@ -1,0 +1,9 @@
+[
+	{
+		"caption": "tailwindcss class sorter",
+		"children": [
+			{ "caption": "Format This File", "command": "sort_tailwindcss" },
+			{ "caption": "Get Group Index List", "command": "get_default_group_index_list_tailwindcss" },
+		],
+	},
+]
