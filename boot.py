@@ -6,7 +6,7 @@ from urllib import request
 import sublime
 
 PROJECT_NAME = "tailwindcss-class-sorter"
-VERSION = "3.3.0"
+VERSION = "3.4.0"
 PLATFORM = sublime.platform()  # Literal["osx", "linux", "windows"]
 ARCH = sublime.arch()  # Literal["x32", "x64", "arm64"]
 BINARY_TYPE = "darwin-" if PLATFORM == "osx" else f"{PLATFORM}-"

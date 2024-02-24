@@ -26,5 +26,8 @@
 			class="@xs:hover:top-[5px] @xs/main:hover:top-[5px] @sm:hover:top-[5px] @md:hover:top-[5px] @lg:hover:top-[5px] @xl:hover:top-[5px] @2xl:hover:top-[5px] @3xl:hover:top-[5px] @4xl:hover:top-[5px] @5xl:hover:top-[5px] @6xl:hover:top-[5px] @7xl:hover:top-[5px] @[1px]:hover:top-[5px] @[1px]/main:hover:top-[5px]">
 		</div>
 	</div>
+	<div
+		class="forced-colors:sm:has-[:disabled]:*:top-[5px] forced-colors:sm:hover:*:top-[5px] grid-rows-subgrid grid-rows-9 grid-cols-subgrid grid-cols-9 min-w-12 max-w-12 h-dvh h-lvh h-svh min-h-dvh min-h-lvh min-h-svh min-h-12 max-h-dvh max-h-lvh max-h-svh max-h-12 size-auto size-fit size-full text-balance opacity-35 forced-color-adjust-auto forced-color-adjust-none">
+	</div>
 </body>
 </html>
