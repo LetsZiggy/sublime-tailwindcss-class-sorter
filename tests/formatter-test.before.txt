@@ -26,5 +26,8 @@
 			class="   hover:@lg:top-[5px]   hover:@[1px]/main:top-[5px]  hover:@[1px]:top-[5px]  hover:@md:top-[5px]  hover:@2xl:top-[5px]  hover:@5xl:top-[5px]  hover:@4xl:top-[5px]  hover:@6xl:top-[5px]  hover:@sm:top-[5px]  hover:@xs:top-[5px]  hover:@7xl:top-[5px]  hover:@3xl:top-[5px]  hover:@xl:top-[5px]   hover:@xs/main:top-[5px]   ">
 		</div>
 	</div>
+	<div
+		class="    max-h-12  h-dvh    size-full  grid-rows-subgrid    forced-colors:*:sm:has-[:disabled]:top-[5px]  min-h-12  forced-color-adjust-auto  size-fit  min-h-lvh    min-h-svh  opacity-35    max-h-lvh    min-h-dvh  max-w-12  size-auto  grid-cols-9    h-svh  min-w-12    h-lvh  forced-color-adjust-none  hover:*:forced-colors:sm:top-[5px]  max-h-svh  max-h-dvh  grid-cols-subgrid  grid-rows-9  text-balance   ">
+	</div>
 </body>
 </html>
