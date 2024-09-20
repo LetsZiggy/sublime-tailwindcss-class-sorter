@@ -1,18 +1,28 @@
+[project]
+name = "sublime-tailwindcss-class-sorter"
+requires-python = ">= 3.8"
+dependencies = [
+	#"black @ git+https://github.com/LetsZiggy/black.git@indent-2",
+	#"black @ git+https://github.com/LetsZiggy/black.git@indent-tab",
+	"ruff",
+	"typing_extensions",
+]
+
 [tool.basedpyright]
 venvPath = "."
 venv = "venv"
-pythonVersion = "3.8"
+#pythonVersion = "3.8" # optional
 
 	[[tool.basedpyright.executionEnvironments]]
 	root = "."
 	extraPaths = []
-	pythonVersion = "3.8"
+	#pythonVersion = "3.8" # optional
 	pythonPlatform = "Linux"
 
 [tool.ruff]
 extend-exclude = [
 	"CVS",
-	"__pycache__"
+	"__pycache__",
 ]
 extend-ignore = [
 	"W191",
@@ -28,7 +38,7 @@ extend-ignore = [
 	"COM812",
 	"COM819",
 	"ISC001",
-	"ISC002"
+	"ISC002",
 ] # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
 extend-select = [
 	"C90",
@@ -40,12 +50,12 @@ extend-select = [
 	"PT",
 	"Q",
 	"SIM",
-	"PLR"
+	"PLR",
 ]
 fix = true
 force-exclude = true
 line-length = 120
-target-version = "py38"
+#target-version = "py38" # see [project].requires-python
 
 	[tool.ruff.pycodestyle]
 	max-doc-length = 120

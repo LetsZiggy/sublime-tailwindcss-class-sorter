@@ -23,6 +23,7 @@ import sublime_plugin
 from typing_extensions import override
 
 PROJECT_NAME = "tailwindcss-class-sorter"
+PROJECT_NAME_SHORT = "twcs"
 SETTINGS_FILE = f"{PROJECT_NAME}.sublime-settings"
 PLATFORM = sublime.platform()
 KEYMAP_FILE = f"Default ({PLATFORM}).sublime-keymap"
@@ -57,7 +58,7 @@ class Settings:
 				"Package Storage",
 				PROJECT_NAME,
 				VERSION,
-				PROJECT_NAME,
+				PROJECT_NAME_SHORT,
 			)
 		),
 		"config_path": path.normpath(
@@ -79,7 +80,7 @@ class Settings:
 		cls.data["sublime_text_config"] = settings_default
 
 		settings_user: Dict[str, Any] = view.settings().to_dict()
-		settings_user = {k: v for k, v in settings_user.items() if "tailwindcss-class-sorter" in k}
+		settings_user = {k: v for k, v in settings_user.items() if PROJECT_NAME in k}
 		settings_user = {k[25:]: v for k, v in Settings.flatten_dict(settings_user)}
 		cls.data["sublime_text_config"].update(settings_user)
 
@@ -180,7 +181,7 @@ class TailwindcssClassSorterEventListeners(sublime_plugin.EventListener):
 			not path.exists(settings["binary_path"]) or not path.exists(settings["config_path"])
 		):
 			sublime.error_message(
-				'Couldn\'t find "tailwindcss-class-sorter" binary. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.'
+				f'Couldn\'t find "{PROJECT_NAME}" binary. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.'
 			)
 
 			return False
@@ -230,7 +231,7 @@ class ClearCacheTailwindcssCommand(sublime_plugin.TextCommand):
 			rmtree(versioned_cache_path, ignore_errors=True)
 
 		sublime.message_dialog(
-			'"tailwindcss-class-sorter" binary has been deleted. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.'
+			f'"{PROJECT_NAME}" binary has been deleted. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.'
 		)
 
 
@@ -268,10 +269,10 @@ class SortTailwindcssCommand(sublime_plugin.TextCommand):
 			)
 		except OSError:
 			sublime.error_message(
-				'Couldn\'t find "tailwindcss-class-sorter" binary. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.'
+				f'Couldn\'t find "{PROJECT_NAME}" binary. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.'
 			)
 			raise Exception(
-				'\n>>> Couldn\'t find "tailwindcss-class-sorter" binary. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.',
+				f'\n>>> Couldn\'t find "{PROJECT_NAME}" binary. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.',
 			)
 
 		stdout, stderr = p.communicate()
@@ -321,10 +322,10 @@ class GetDefaultGroupIndexListTailwindcssCommand(sublime_plugin.TextCommand):
 				)
 			except OSError:
 				sublime.error_message(
-					'Couldn\'t find "tailwindcss-class-sorter" binary. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.'
+					f'Couldn\'t find "{PROJECT_NAME}" binary. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.'
 				)
 				raise Exception(
-					'\n>>> Couldn\'t find "tailwindcss-class-sorter" binary. Restarting Sublime Text will reinstall "tailwindcss-class-sorter" binary.',
+					f'\n>>> Couldn\'t find "{PROJECT_NAME}" binary. Restarting Sublime Text will reinstall "{PROJECT_NAME}" binary.',
 				)
 
 			stdout, stderr = p.communicate()

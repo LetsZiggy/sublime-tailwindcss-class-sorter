@@ -6,6 +6,7 @@ from urllib import request
 import sublime
 
 PROJECT_NAME = "tailwindcss-class-sorter"
+PROJECT_NAME_SHORT = "twcs"
 VERSION = "3.4.0"
 PLATFORM = sublime.platform()  # Literal["osx", "linux", "windows"]
 ARCH = sublime.arch()  # Literal["x32", "x64", "arm64"]
@@ -23,23 +24,23 @@ BINARY_FOLDER_PATH = path.join(CACHE_PATH, VERSION)
 CONFIG_FILE_PATH = path.join(CACHE_PATH, VERSION, "config.min.json")
 ORDER_LIST_FILE_PATH = path.join(CACHE_PATH, VERSION, "order_list.json")
 GZIP_FILE_PATH = (
-	path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME}.exe.gz")
+	path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME_SHORT}.exe.gz")
 	if PLATFORM == "windows"
-	else path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME}.gz")
+	else path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME_SHORT}.gz")
 )
 BINARY_FILE_PATH = (
-	path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME}.exe")
+	path.join(CACHE_PATH, VERSION, f"{PROJECT_NAME_SHORT}.exe")
 	if PLATFORM == "windows"
-	else path.join(CACHE_PATH, VERSION, PROJECT_NAME)
+	else path.join(CACHE_PATH, VERSION, PROJECT_NAME_SHORT)
 )
 
-URL_BASE = "https://raw.githubusercontent.com/LetsZiggy/tailwindcss-class-sorter/main/dist"
+URL_BASE = f"https://raw.githubusercontent.com/LetsZiggy/{PROJECT_NAME}/main/dist"
 CONFIG_URL = f"{URL_BASE}/config.min.json"
 ORDER_LIST_URL = f"{URL_BASE}/order_list.json"
 GZIP_URL = (
-	f"{URL_BASE}/{VERSION}/{BINARY_TYPE}/tailwindcss-class-sorter.exe.gz"
+	f"{URL_BASE}/{VERSION}/{BINARY_TYPE}/{PROJECT_NAME_SHORT}.exe.gz"
 	if PLATFORM == "windows"
-	else f"{URL_BASE}/{VERSION}/{BINARY_TYPE}/tailwindcss-class-sorter.gz"
+	else f"{URL_BASE}/{VERSION}/{BINARY_TYPE}/{PROJECT_NAME_SHORT}.gz"
 )
 
 
