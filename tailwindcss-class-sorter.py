@@ -29,7 +29,7 @@ PLATFORM = sublime.platform()
 KEYMAP_FILE = f"Default ({PLATFORM}).sublime-keymap"
 IS_WINDOWS = PLATFORM == "windows"
 CODE_COMMAND_NOT_FOUND = 127
-VERSION = "3.4.0"
+VERSION = "4.0.0"
 
 
 class SettingsData(TypedDict):
