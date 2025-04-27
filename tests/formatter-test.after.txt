@@ -35,5 +35,8 @@
 			class="**:has-checked:in-focus:not-supports-[display:grid]:dark nth-3:nth-last-5:nth-of-type-4:nth-last-of-type-6:static nth-[2n+1_of_li]:nth-last-[2n+1_of_li]:nth-of-type-[2n+1_of_li]:nth-last-of-type-[2n+1_of_li]:hidden @3xs/main:@2xs/main:@xs/main:@sm/main:@md/main:@lg/main:@xl/main:@2xl/main:@3xl/main:@4xl/main:@5xl/main:@6xl/main:@7xl/main:@[200px]:@[200px]/main:w-auto">
 		</div>
 	</div>
+	<div
+		class="forced-colors:inverted-colors:pointer-fine:pointer-coarse:pointer-none:any-pointer-fine:any-pointer-coarse:any-pointer-none:portrait:landscape:noscript:block text-shadow-sm text-shadow-none text-shadow-black/50 text-shadow-neutral-300/50 bg-bottom-left bg-bottom-right bg-left-bottom bg-left-top bg-right-bottom bg-right-top bg-top-left bg-top-right drop-shadow-neutral-300/50 mask-linear-from-neutral-50/50 mask-linear-to-10% mask-linear-to-5 mask-clip-border mask-clip-content mask-clip-fill mask-clip-padding mask-clip-stroke mask-clip-view mask-no-clip">
+	</div>
 </body>
 </html>
