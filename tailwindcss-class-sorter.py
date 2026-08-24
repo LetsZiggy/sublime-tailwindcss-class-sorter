@@ -29,7 +29,7 @@ PLATFORM = sublime.platform()
 KEYMAP_FILE = f"Default ({PLATFORM}).sublime-keymap"
 IS_WINDOWS = PLATFORM == "windows"
 CODE_COMMAND_NOT_FOUND = 127
-VERSION = "4.2.0"
+VERSION = "4.2.1"
 
 re_doublequote = re_compile(r'"')
 re_multiline = re_compile(r"(?:/\*)|(?:\*/)")
